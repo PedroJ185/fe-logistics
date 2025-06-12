@@ -1,38 +1,119 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --primary: #0077b6;
+  --primary-dark: #005f8f;
+  --accent: #00b36b;
+  --danger: #e63946;
+  --light-bg: #f7f9fb;
+  --card-bg: #ffffff;
+  --gray-text: #555;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--light-bg);
+  color: var(--gray-text);
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
   text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: var(--primary-dark);
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section {
+  margin-top: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  background: #fff;
+  color: #333;
+  transition: border-color 0.2s ease;
+}
+
+select:focus,
+input[type="date"]:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+button {
+  background-color: var(--primary);
   color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background-color: var(--danger);
+  margin-left: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  background-color: #c62828;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: #f1f1f1;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
