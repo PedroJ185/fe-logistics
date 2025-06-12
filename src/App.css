@@ -1,40 +1,44 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
 }
 
 .container {
   max-width: 600px;
   margin: 40px auto;
   background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #1976d2;
+  margin-bottom: 20px;
 }
 
 .section {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 label {
   display: block;
   margin-bottom: 6px;
-  font-weight: bold;
+  font-weight: 600;
+  color: #333;
 }
 
-select, input[type=\"date\"] {
+select,
+input[type="date"] {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 16px;
 }
 
 button {
@@ -42,8 +46,14 @@ button {
   background-color: #1976d2;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #135ba1;
 }
 
 button:disabled {
@@ -51,7 +61,26 @@ button:disabled {
   cursor: not-allowed;
 }
 
-ul {
-  list-style: disc;
-  padding-left: 20px;
+ul.holiday-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.holiday-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cancel-btn {
+  background-color: #e53935;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.cancel-btn:hover {
+  background-color: #c62828;
 }
